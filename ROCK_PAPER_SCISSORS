@@ -1,0 +1,37 @@
+import random
+print("Hello User!")
+print("Play and enjoy the Rock Paper Scissors game...")
+r="Yes"
+cpoints=0
+upoints=0
+while(r=="Yes" or n=="Yes"):
+    r="No"
+    choice = ["Rock", "Paper", "Scissors"]
+    user_choice = input("Choose Rock, Paper, or Scissors: ")
+    computer_choice = random.choice(choice)
+    print("You chose: ", user_choice)
+    print("Computer chose: ", computer_choice)
+    if user_choice == computer_choice:
+       print("It's a tie!")
+    elif user_choice == "Rock" and computer_choice == "Scissors":
+        print("Rock smashes scissors! ")
+        print("You win!")
+        upoints+=1
+    elif user_choice == "Paper" and computer_choice == "Rock":
+        print("Paper covers rock! ")
+        print("You win!")
+        upoints += 1
+    elif user_choice == "Scissors" and computer_choice == "Paper":
+        print("Scissors cuts paper! ")
+        print("You win!")
+        upoints += 1
+    else:
+        print("Computer wins!")
+        cpoints += 1
+    print("Do you want to play this game one more time(Yes/No):")
+    n = input()
+
+print("Your score is:")
+print(upoints)
+print("computer score is:")
+print(cpoints)
